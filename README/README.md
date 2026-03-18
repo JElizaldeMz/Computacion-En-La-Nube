@@ -1,5 +1,8 @@
 # Tarea 2 — Microservicios Spring Boot
 **Computación en la Nube — Seminario de Ciencias de la Computación B**
+**Integrantes**
+- Elizalde Maza Jesús Eduardo 321031686
+- Peredo López Citlalli Abigail 321161022
 
 **Objetivo:** Entender la programación de microservicios usando las APIs RestTemplate y Feign.
 
