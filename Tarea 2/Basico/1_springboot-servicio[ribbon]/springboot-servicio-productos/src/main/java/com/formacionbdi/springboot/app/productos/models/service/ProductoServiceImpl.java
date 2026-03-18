@@ -28,7 +28,6 @@ public class ProductoServiceImpl implements IProductoService{
 	}
 
 	@Override
-	@Transactional
 	public void eliminar(Long id) {
 		productoDao.deleteById(id);
 	}

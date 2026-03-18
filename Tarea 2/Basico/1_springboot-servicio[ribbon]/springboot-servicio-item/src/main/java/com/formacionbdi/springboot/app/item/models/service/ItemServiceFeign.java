@@ -25,4 +25,10 @@ public class ItemServiceFeign implements ItemService {
 		return new Item(clienteFeign.detalle(id), cantidad);
 	}
 
+	@Override
+	public void eliminar(Long id) {
+		clienteFeign.eliminar(id);
+	}
+
+
 }

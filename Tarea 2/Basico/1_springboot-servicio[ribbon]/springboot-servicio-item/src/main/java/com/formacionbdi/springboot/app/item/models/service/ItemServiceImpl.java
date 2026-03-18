@@ -22,7 +22,6 @@ public class ItemServiceImpl implements ItemService {
 	@Override
 	public List<Item> findAll() {
 		List<Producto> productos = Arrays.asList(clienteRest.getForObject("http://localhost:8001/listar", Producto[].class));
-		
 		return productos.stream().map(p -> new Item(p, 1)).collect(Collectors.toList());
 	}
 
@@ -34,4 +33,8 @@ public class ItemServiceImpl implements ItemService {
 		return new Item(producto, cantidad);
 	}
 
+	@Override
+	public void eliminar(Long id) {
+		clienteRest.delete("http://localhost:8001/delete/{id}", id);
+	}
 }

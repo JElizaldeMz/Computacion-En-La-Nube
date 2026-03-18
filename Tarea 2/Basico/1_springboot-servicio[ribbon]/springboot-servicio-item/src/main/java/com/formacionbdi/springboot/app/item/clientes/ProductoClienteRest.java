@@ -5,13 +5,14 @@ import java.util.List;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.DeleteMapping;
 
 import com.formacionbdi.springboot.app.item.models.Producto;
 
 // Para Feing:
-//@FeignClient(name = "servicio-productos", url="localhost:8001")
+@FeignClient(name = "servicio-productos", url="localhost:8001")
 // Para Feing con Ribbon:
-@FeignClient(name = "servicio-productos")
+// @FeignClient(name = "servicio-productos")
 
 public interface ProductoClienteRest {
 	
@@ -20,5 +21,8 @@ public interface ProductoClienteRest {
 	
 	@GetMapping("/ver/{id}")
 	public Producto detalle(@PathVariable Long id);
+
+	@DeleteMapping ("/delete/{id}")
+	public void eliminar (@PathVariable Long id);
 
 }
