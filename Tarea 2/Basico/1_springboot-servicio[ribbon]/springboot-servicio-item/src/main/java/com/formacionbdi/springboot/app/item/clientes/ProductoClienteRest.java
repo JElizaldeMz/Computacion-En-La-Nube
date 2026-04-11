@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import com.formacionbdi.springboot.app.item.models.Producto;
 
 // Para Feing:
-@FeignClient(name = "servicio-productos", url="localhost:8001")
+@FeignClient(name = "servicio-productos")
 // Para Feing con Ribbon:
 // @FeignClient(name = "servicio-productos")
 
