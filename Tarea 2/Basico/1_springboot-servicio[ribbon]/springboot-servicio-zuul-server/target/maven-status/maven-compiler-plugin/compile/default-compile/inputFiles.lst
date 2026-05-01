@@ -1,0 +1,4 @@
+/home/edu/Documentos/CC/Semestre 6/Nube/Computacion-En-La-Nube/Tarea 2/Basico/1_springboot-servicio[ribbon]/springboot-servicio-zuul-server/src/main/java/com/formacionbdi/springboot/app/zuul/SpringbootServicioZuulServerApplication.java
+/home/edu/Documentos/CC/Semestre 6/Nube/Computacion-En-La-Nube/Tarea 2/Basico/1_springboot-servicio[ribbon]/springboot-servicio-zuul-server/src/main/java/com/formacionbdi/springboot/app/zuul/filters/PostTiempoTranscurridoFilter.java
+/home/edu/Documentos/CC/Semestre 6/Nube/Computacion-En-La-Nube/Tarea 2/Basico/1_springboot-servicio[ribbon]/springboot-servicio-zuul-server/src/main/java/com/formacionbdi/springboot/app/zuul/filters/PreTiempoTranscurridoFilter.java
+/home/edu/Documentos/CC/Semestre 6/Nube/Computacion-En-La-Nube/Tarea 2/Basico/1_springboot-servicio[ribbon]/springboot-servicio-zuul-server/src/main/java/com/formacionbdi/springboot/app/zuul/filters/ItemsFallback.java

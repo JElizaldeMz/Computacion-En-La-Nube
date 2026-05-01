@@ -48,4 +48,31 @@ public class ItemController {
 		return item;
 	}
 
+	// -------------------------------------------------------
+	// Latencia: simula un microservicio lento (2 segundos).
+	// Hystrix tiene timeout de 1 segundo -> activa fallback.
+	// -------------------------------------------------------
+	@HystrixCommand(fallbackMethod = "metodoAlternativoLatencia")
+	@GetMapping("/ver-lento/{id}/cantidad/{cantidad}")
+	public Item detalleLento(@PathVariable Long id, @PathVariable Integer cantidad) {
+		try {
+			Thread.sleep(2000L);
+		} catch (InterruptedException e) {
+			Thread.currentThread().interrupt();
+		}
+		return itemService.findById(id, cantidad);
+	}
+
+	public Item metodoAlternativoLatencia(Long id, Integer cantidad) {
+		Producto producto = new Producto();
+		producto.setId(id);
+		producto.setMarca("Sin marca - timeout superado");
+		producto.setModelo("Servicio lento, fallback activado");
+		producto.setPrecio(0.0);
+		Item item = new Item();
+		item.setProducto(producto);
+		item.setCantidad(cantidad);
+		return item;
+	}
+
 }
